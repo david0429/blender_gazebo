@@ -1,0 +1,5 @@
+<launch>
+  <param name="$NAME$_description" command="$(find xacro)/xacro.py '$(find $PACKAGE$)/urdf/$NAME$.urdf.xacro'" />
+
+  <node name="spawn_$NAME$" pkg="gazebo_ros" type="spawn_model" args="-param $NAME$_description -urdf -x 0 -y 0 -z 0 -model $NAME$" respawn="false" output="screen" />
+</launch>
