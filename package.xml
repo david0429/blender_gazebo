@@ -10,6 +10,7 @@
 
   <buildtool_depend>catkin</buildtool_depend>
   <exec_depend>rospkg</exec_depend>
+  <exec_depend>gazebo_ros</exec_depend>
 
   <export>
   </export>
