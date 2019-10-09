@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+cp -r $(rospack find blender_gazebo)/blender_gazebo ~/Desktop/blender-2.80-linux-glibc217-x86_64/2.80/scripts/addons
