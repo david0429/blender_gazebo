@@ -1,3 +1,15 @@
 #!/usr/bin/env bash
 
-cp -r $(rospack find blender_gazebo)/blender_gazebo ~/Desktop/blender-2.80-linux-glibc217-x86_64/2.80/scripts/addons
+if [ -z "$BLENDER_SCRIPT_DIR" ]
+then
+      echo "\$BLENDER_SCRIPT_DIR is UNSET. Please set \$BLENDER_SCRIPT_DIR to the Blender directory containing the scripts folder"
+else
+  if [ -d "$BLENDER_SCRIPT_DIR/scripts/addons" ]
+  then
+      echo "Installing blender_gazebo plugin to $BLENDER_SCRIPT_DIR/scripts/addons"
+      cp -r $(rospack find blender_gazebo)/blender_gazebo/blender_gazebo.py $BLENDER_SCRIPT_DIR/scripts/addons
+      echo "Done"
+  else
+    echo "\$BLENDER_SCRIPT_DIR is INVALID. Please set \$BLENDER_SCRIPT_DIR to the Blender directory containing the scripts folder"
+  fi
+fi
