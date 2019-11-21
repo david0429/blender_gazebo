@@ -7,3 +7,11 @@ catkin_package()
 include_directories(
   ${catkin_INCLUDE_DIRS}
 )
+
+
+install(DIRECTORY blender_gazebo worlds
+  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
+)
+install(DIRECTORY scripts
+  DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
+)
