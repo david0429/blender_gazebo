@@ -12,6 +12,7 @@ include_directories(
 install(DIRECTORY blender_gazebo worlds
   DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
 )
-install(DIRECTORY scripts
+
+install(PROGRAMS scripts/install
   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
