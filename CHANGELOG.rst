@@ -2,8 +2,8 @@
 Changelog for package blender_gazebo
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.0.4 (2019-12-08)
+------------------
 * Fixed install
 * Contributors: Dave Niewinski
 
